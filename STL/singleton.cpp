@@ -28,8 +28,8 @@ public:
 //		delete data;
 //		data = nullptr;
 //	}
-//	Singleton(const Singleton&);// 私有化拷贝构造
-//	Singleton& operator=(const Singleton&);// 私有化赋值运算符
+//	Singleton(const Singleton&)= delete;;// 私有化拷贝构造
+//	Singleton& operator=(const Singleton&)= delete;;// 私有化赋值运算符
 //	Data* data;
 //public:
 //	static Singleton& getInstance() { // 被引用时才初始化，且由于是局部静态变量，多次引用时仅分配一次空间
@@ -46,8 +46,8 @@ public:
 //		delete data;
 //		data = nullptr;
 //	}
-//	Singleton(const Singleton&);
-//	Singleton& operator=(const Singleton&);
+//	Singleton(const Singleton&)= delete;;
+//	Singleton& operator=(const Singleton&= delete;);
 //	Data* data;
 //	static Singleton instance;
 //	
@@ -57,7 +57,7 @@ public:
 //		return instance;
 //	}
 //};
-//Singleton Singleton::instance; // 初始化静态成员
+//Singleton Singleton::instance; // 声明并初始化静态成员
 
 
 /*
@@ -72,8 +72,8 @@ private:
 		delete data;
 		data = nullptr;
 	}
-	Singleton(const Singleton&);// 私有化拷贝构造
-	Singleton& operator=(const Singleton&);// 私有化赋值运算符
+	Singleton(const Singleton&) = delete;// 私有化拷贝构造，并显式禁止调用
+	Singleton& operator=(const Singleton&) = delete;// 私有化赋值运算符，并显式禁止调用
 
 	class Release {
 	public: // 注意：这个public一定要加!!!
@@ -106,7 +106,7 @@ public:
 		return tmp;
 	}
 };
-atomic<Singleton*>Singleton::instance; //类外声明静态成员(这里并非初始化！！！所以依然是懒汉模式)
+atomic<Singleton*> Singleton::instance; //类外声明静态成员(这里并非初始化！！！所以依然是懒汉模式)
 mutex Singleton::m_utex;
 Singleton::Release Singleton::release;
 
