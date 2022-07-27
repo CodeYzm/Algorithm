@@ -3,6 +3,7 @@
 #include<algorithm>
 using namespace std;
 
+
 void printArray(vector<int>&nums) {
 	for (const int& num : nums) {
 		cout << num << ' ';
@@ -12,7 +13,7 @@ void printArray(vector<int>&nums) {
 void bubbleSort(vector<int>&nums) {
 	int n = nums.size();
 	for (int i = 0; i < n; ++i) {
-		// Ã¿´ÎÑ­»·°Ñ×î´óµÄÊı»»µ½n-i-1µÄÎ»ÖÃ
+		// æ¯æ¬¡å¾ªç¯æŠŠæœ€å¤§çš„æ•°æ¢åˆ°n-i-1çš„ä½ç½®
 		for (int j = 1; j < n-i; ++j) {
 			if (nums[j - 1] > nums[j]) swap(nums[j], nums[j - 1]);
 		}
@@ -22,7 +23,7 @@ void bubbleSort(vector<int>&nums) {
 void selectSort(vector<int>& nums) {
 	int n = nums.size();
 	for (int i = 0; i < n; ++i) {
-		// Ã¿´ÎÑ­»·´Ói+1 - nÀïÃæÌôÒ»¸ö×îĞ¡µÄÊı»»µ½i
+		// æ¯æ¬¡å¾ªç¯ä»i+1 - né‡Œé¢æŒ‘ä¸€ä¸ªæœ€å°çš„æ•°æ¢åˆ°i
 		int minN = i;
 		for (int j = i+1; j < n; ++j) {
 			if (nums[j] < nums[minN]) minN = j;
@@ -37,10 +38,10 @@ void merge(vector<int>& nums, vector<int>& arr, int left, int mid, int right) {
 	while (i <= mid && j <= right) {
 		arr[++start] = nums[i] < nums[j] ? nums[i++] : nums[j++];
 	}
-	// ºÏ²¢Ê£ÓàÔªËØ
+	// åˆå¹¶å‰©ä½™å…ƒç´ 
 	while (i <= mid) arr[++start] = nums[i++];
 	while (j <= right) arr[++start] = nums[j++];
-	// ¸³Öµ¸øÔ­Êı×é
+	// èµ‹å€¼ç»™åŸæ•°ç»„
 	while (left <= right) {
 		nums[left] = arr[left];
 		++left;
@@ -49,10 +50,10 @@ void merge(vector<int>& nums, vector<int>& arr, int left, int mid, int right) {
 void m_sort(vector<int>& nums, vector<int>& arr, int left, int right) {
 	if (left < right) {
 		int mid = (left + right) >> 1;
-		// µİ¹é·Ö×é
+		// é€’å½’åˆ†ç»„
 		m_sort(nums, arr, left, mid);
 		m_sort(nums, arr, mid + 1, right);
-		// ×îºóÒ»²ãµİ¹éºÏ²¢
+		// æœ€åä¸€å±‚é€’å½’åˆå¹¶
 		merge(nums, arr, left, mid, right);
 	}
 }
@@ -82,11 +83,11 @@ void quickSort(vector<int>& nums) {
 
 void insertionSort(vector<int>& nums) {
 	int n = nums.size();
-	// ´ÓµÚ¶ş¸öÔªËØ¿ªÊ¼±éÀú
+	// ä»ç¬¬äºŒä¸ªå…ƒç´ å¼€å§‹éå†
 	for (int i = 1; i < n; ++i) {
 		int num = nums[i];
 		int j = i - 1;
-		// Ã¿Ò»¸ö±ÈµÚi+1¸öÔªËØ´óµÄÔªËØ¶¼»á±»ºóÒÆ£¬×îºóĞ¡µÄÔªËØ»á±»²åÈëµ½Ç°Ãæ
+		// æ¯ä¸€ä¸ªæ¯”ç¬¬i+1ä¸ªå…ƒç´ å¤§çš„å…ƒç´ éƒ½ä¼šè¢«åç§»ï¼Œæœ€åå°çš„å…ƒç´ ä¼šè¢«æ’å…¥åˆ°å‰é¢
 		while (j >= 0 && nums[j] > num) {
 			swap(nums[j], nums[j + 1]);
 			--j;
@@ -96,12 +97,12 @@ void insertionSort(vector<int>& nums) {
 
 void shellSort(vector<int>& nums) {
 	int n = nums.size();
-	// È¡³õÊ¼ÔöÁ¿Îªn/2 £¬Ã¿´ÎÔöÁ¿¶¼ËõĞ¡1/2
+	// å–åˆå§‹å¢é‡ä¸ºn/2 ï¼Œæ¯æ¬¡å¢é‡éƒ½ç¼©å°1/2
 	for (int inc = n >> 1; inc > 0; inc >>= 1) {
-		// incÎª²åÈëÅÅĞòµÄ±éÀúÆğµã£¬ÒòÎªÄ¬ÈÏµÚÒ»¸öÔªËØÊÇÓĞĞòµÄ
+		// incä¸ºæ’å…¥æ’åºçš„éå†èµ·ç‚¹ï¼Œå› ä¸ºé»˜è®¤ç¬¬ä¸€ä¸ªå…ƒç´ æ˜¯æœ‰åºçš„
 		for (int i = inc; i < n; ++i) {
 			int num = nums[i];
-			// Èç¹ûÉÏÒ»¸öÔªËØ±Èµ±Ç°ÔªËØ´ó£¬²»¶ÏºóÒÆ
+			// å¦‚æœä¸Šä¸€ä¸ªå…ƒç´ æ¯”å½“å‰å…ƒç´ å¤§ï¼Œä¸æ–­åç§»
 			for (int j = i; j >= inc && num < nums[j - inc]; j -= inc) {
 				swap(nums[j], nums[j - inc]);
 			}
@@ -122,56 +123,56 @@ void heapify(vector<int>& nums, int idx, int n) {
 
 void heapSort(vector<int>& nums) {
 	int n = nums.size();
-	// ½¨¶Ñ
-	// ÏÂ±êÎªiµÄ¸¸½ÚµãÏÂ±êÎª(i-1)/2£¬ÏÂ±êÎªn-1ÔòÎªn/2-1
+	// å»ºå †
+	// ä¸‹æ ‡ä¸ºiçš„çˆ¶èŠ‚ç‚¹ä¸‹æ ‡ä¸º(i-1)/2ï¼Œä¸‹æ ‡ä¸ºn-1åˆ™ä¸ºn/2-1
 	for (int i = n >> 1 - 1; i >= 0; --i) {
 		heapify(nums, i, n);
 	}
-	// ÅÅĞò
+	// æ’åº
 	for (int i = n - 1; i > 0; --i) {
-		// ½«×î´óµÄ¶Ñ¶¥ÔªËØ½»»»µ½Î´ÅÅĞòÊı×éµÄÄ©¶Ë
+		// å°†æœ€å¤§çš„å †é¡¶å…ƒç´ äº¤æ¢åˆ°æœªæ’åºæ•°ç»„çš„æœ«ç«¯
 		swap(nums[0], nums[i]);
-		// Î¬»¤´Ó¶Ñ¶¥µ½Î´ÅÅĞòÊı×éÄ©¶ËµÄ¶Ñ½á¹¹
+		// ç»´æŠ¤ä»å †é¡¶åˆ°æœªæ’åºæ•°ç»„æœ«ç«¯çš„å †ç»“æ„
 		heapify(nums, 0, i);
 	}
 }
 
 void countSort(vector<int>& nums) {
 	int maxN = *max_element(nums.begin(), nums.end());
-	// ¼ÆÊıÊı×é
+	// è®¡æ•°æ•°ç»„
 	vector<int>count(maxN+1);
 	for (int& num : nums) ++count[num];
-	// ÀÛ¼Æ¼ÆÊı(ÓÃÓÚÇóµ±Ç°Öµ¶ÔÓ¦µÄÏÂ±ê)
+	// ç´¯è®¡è®¡æ•°(ç”¨äºæ±‚å½“å‰å€¼å¯¹åº”çš„ä¸‹æ ‡)
 	for (int i = 1; i <= maxN; ++i) count[i] += count[i - 1];
 
 	int n = nums.size();
 	vector<int>arr(n);
-	// µ¹ĞòÈÃÅÅĞòÎÈ¶¨£¬ºó³öÏÖµÄÊı×ÖÈÔ¾ÉÅÅºóÃæ
+	// å€’åºè®©æ’åºç¨³å®šï¼Œåå‡ºç°çš„æ•°å­—ä»æ—§æ’åé¢
 	for (int i = n-1; i >= 0; --i) {
-		// ÀÛ¼Æ¼ÆÊı¼õ1¾ÍÊÇ¶ÔÓ¦µÄÏÂ±êË÷Òı
+		// ç´¯è®¡è®¡æ•°å‡1å°±æ˜¯å¯¹åº”çš„ä¸‹æ ‡ç´¢å¼•
 		arr[count[nums[i]]-1] = nums[i];
 		--count[nums[i]];
 	}
-	// ¸³Öµ¸øÔ­Êı×é
+	// èµ‹å€¼ç»™åŸæ•°ç»„
 	nums.assign(arr.begin(), arr.end());
 }
 
 void bucketSort(vector<int>& nums) {
 	int n = nums.size();
-	// ÉèÖÃÍ°µÄÊıÄ¿
+	// è®¾ç½®æ¡¶çš„æ•°ç›®
 	int bucketNum = 5;
-	// ¼ÆËãÍ°µÄ´óĞ¡
+	// è®¡ç®—æ¡¶çš„å¤§å°
 	int bucketSize = n / bucketNum;
 	vector<vector<int>>buckets(bucketNum);
-	// ½«Êı°´ÕÕ´óĞ¡×°½ø¶ÔÓ¦Í°Àï
+	// å°†æ•°æŒ‰ç…§å¤§å°è£…è¿›å¯¹åº”æ¡¶é‡Œ
 	for (const int& num : nums) {
 		buckets[num / bucketSize].emplace_back(num);
 	}
-	// Ã¿¸öÍ°Ê¹ÓÃ¿ìÅÅ
+	// æ¯ä¸ªæ¡¶ä½¿ç”¨å¿«æ’
 	for (auto& bucket : buckets) {
 		quickSort(bucket);
 	}
-	// Ğ´»ØÔ­Êı×é
+	// å†™å›åŸæ•°ç»„
 	int i = -1;
 	for (auto& bucket : buckets) {
 		for (int& num : bucket) {
@@ -181,17 +182,17 @@ void bucketSort(vector<int>& nums) {
 }
 
 void rdx_sort(vector<int>& nums, int n, int exp) {
-	// 0-9Ê®¸öÍ°
+	// 0-9åä¸ªæ¡¶
 	vector<int>buckets(10);
-	// ÁÙÊ±Êı×é´æ´¢ÅÅĞò½á¹û
+	// ä¸´æ—¶æ•°ç»„å­˜å‚¨æ’åºç»“æœ
 	vector<int>arr(n);
 	int i;
-	// Í°¼ÆÊı(ÓÃÁË¼ÆÊıÅÅĞòµÄË¼Ïë£¬Ê¡È¥ÁËÃ¿¸öÍ°×°¶à¸öÊı×ÖµÄ¿Õ¼ä)
+	// æ¡¶è®¡æ•°(ç”¨äº†è®¡æ•°æ’åºçš„æ€æƒ³ï¼Œçœå»äº†æ¯ä¸ªæ¡¶è£…å¤šä¸ªæ•°å­—çš„ç©ºé—´)
 	for (const int& num : nums) ++buckets[(num / exp) % 10];
-	// ÀÛ¼Æ¼ÆÊı
+	// ç´¯è®¡è®¡æ•°
 	for (i = 1; i < 10; ++i) buckets[i] += buckets[i - 1];
-	// ×¢Òâ£ºÕâÀïµ¹Ğò±éÀúÊÇÎªÁËÈÃÅÅĞòÎÈ¶¨£¬ÈÃÅÅÔÚÊı×éºóÃæµÄÊı×Ö£¬Ò²¾ÍÊÇºó½øÍ°µÄÊı×Ö£¬ÈÔ¾ÉÅÅÔÚºóÃæ£¬ÏÈ½øÍ°µÄÊı×ÖÈÔ¾ÉÅÅÔÚÇ°Ãæ
-	// ±ÈÈç£º 10 12 15°´Ê®Î»ÊıÅÅ¶¼ÔÚÍ°1£¬ÀÛ¼Æ¼ÆÊıÊÇ3£¬ËùÒÔarr[3-1]Ó¦¸ÃÊÇ15£¬Èç¹ûÕıĞò±éÀú£¬arr[3-1]¾ÍÊÇ10£¬ÅÅĞò²»ÎÈ¶¨
+	// æ³¨æ„ï¼šè¿™é‡Œå€’åºéå†æ˜¯ä¸ºäº†è®©æ’åºç¨³å®šï¼Œè®©æ’åœ¨æ•°ç»„åé¢çš„æ•°å­—ï¼Œä¹Ÿå°±æ˜¯åè¿›æ¡¶çš„æ•°å­—ï¼Œä»æ—§æ’åœ¨åé¢ï¼Œå…ˆè¿›æ¡¶çš„æ•°å­—ä»æ—§æ’åœ¨å‰é¢
+	// æ¯”å¦‚ï¼š 10 12 15æŒ‰åä½æ•°æ’éƒ½åœ¨æ¡¶1ï¼Œç´¯è®¡è®¡æ•°æ˜¯3ï¼Œæ‰€ä»¥arr[3-1]åº”è¯¥æ˜¯15ï¼Œå¦‚æœæ­£åºéå†ï¼Œarr[3-1]å°±æ˜¯10ï¼Œæ’åºä¸ç¨³å®š
 	for (i = n - 1; i >= 0; --i) {
 		int idx = (nums[i] / exp) % 10;
 		arr[buckets[idx] - 1] = nums[i];
@@ -200,11 +201,11 @@ void rdx_sort(vector<int>& nums, int n, int exp) {
 	nums.assign(arr.begin(), arr.end());
 }
 void radixSort(vector<int>& nums) {
-	// ÕÒ³ö×î´óÖµÓÃÓÚÉèÖÃ»ùÊıÉÏÏŞ
+	// æ‰¾å‡ºæœ€å¤§å€¼ç”¨äºè®¾ç½®åŸºæ•°ä¸Šé™
 	int maxN = *max_element(nums.begin(), nums.end());
 	int n = nums.size();
 	for (int i = 1; i <= maxN; i *= 10) {
-		// ¶Ô´Ó1-maxN¶ÔÓ¦Á¿¼¶µÄ»ùÊı½øĞĞ»ùÊıÅÅĞò
+		// å¯¹ä»1-maxNå¯¹åº”é‡çº§çš„åŸºæ•°è¿›è¡ŒåŸºæ•°æ’åº
 		rdx_sort(nums, n, i);
 	}
 
