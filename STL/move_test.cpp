@@ -3,8 +3,9 @@ using namespace std;
 
 class Data { // 数据类，用来体现移动构造的优势：省去了数据拷贝构造带来的开销
 public:
-	Data() { cout << "Data() 默认构造" << endl;}
+	Data() { cout << "Data() 默认构造" << endl; }
 	Data(const Data& src) { cout << "Data() 拷贝构造" << endl; }
+	~Data() { cout << "Data() 默认析构" << endl; }
 };
 
 class A { // 执行类，建立移动构造函数和移动赋值运算符

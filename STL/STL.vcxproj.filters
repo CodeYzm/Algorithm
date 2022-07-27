@@ -48,6 +48,9 @@
     <ClCompile Include="rand_transform.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="singleton.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sample_hashmap.h">

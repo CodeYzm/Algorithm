@@ -43,22 +43,22 @@ int rand_8_5() {
 	return -1;
 }
 
-int main() {
-	srand((unsigned)time(NULL));
-	int count_8[8] = { 0,0,0,0,0,0,0,0 }; // 统计1-8出现的频次，观察是否分布均匀
-	int count_5[5] = { 0,0,0,0,0 }; // 统计1-5出现的频次，观察是否分布均匀
-	for (int i = 0; i < 10000; ++i) {
-		++count_8[rand_5_8() - 1];
-	}	
-	for (int i = 0; i < 10000; ++i) {
-		++count_5[rand_8_5() - 1];
-	}
-	for (int i = 0; i < 8; ++i) {
-		cout << i + 1 << " : " << count_8[i] << endl;
-	}
-	cout << "==========================" << endl;
-	for (int i = 0; i < 5; ++i) {
-		cout << i + 1 << " : " << count_5[i] << endl;
-	}
-	return 0;
-}
+//int main() {
+//	srand((unsigned)time(NULL));
+//	int count_8[8] = { 0,0,0,0,0,0,0,0 }; // 统计1-8出现的频次，观察是否分布均匀
+//	int count_5[5] = { 0,0,0,0,0 }; // 统计1-5出现的频次，观察是否分布均匀
+//	for (int i = 0; i < 10000; ++i) {
+//		++count_8[rand_5_8() - 1];
+//	}	
+//	for (int i = 0; i < 10000; ++i) {
+//		++count_5[rand_8_5() - 1];
+//	}
+//	for (int i = 0; i < 8; ++i) {
+//		cout << i + 1 << " : " << count_8[i] << endl;
+//	}
+//	cout << "==========================" << endl;
+//	for (int i = 0; i < 5; ++i) {
+//		cout << i + 1 << " : " << count_5[i] << endl;
+//	}
+//	return 0;
+//}
