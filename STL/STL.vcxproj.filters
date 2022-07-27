@@ -51,6 +51,9 @@
     <ClCompile Include="singleton.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="quick_merge_sort_non_recursion.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sample_hashmap.h">

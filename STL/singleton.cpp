@@ -114,19 +114,19 @@ void myThread() {
 	Singleton::getInstance();
 }
 
-int main() {
-	cout << "========" << endl;
-	thread t1(&myThread);
-	//Sleep(1000); // 加1s之后就不会再加锁，不加的话由于线程切换会重复加锁，但只调用一次构造函数
-	thread t2(&myThread);
-	thread t3(&myThread);
-	thread t4(&myThread);
-	thread t5(&myThread);
-	t1.join();
-	t2.join();
-	t3.join();
-	t4.join();
-	t5.join();
-	return 0;
-}
+//int main() {
+//	cout << "========" << endl;
+//	thread t1(&myThread);
+//	//Sleep(1000); // 加1s之后就不会再加锁，不加的话由于线程切换会重复加锁，但只调用一次构造函数
+//	thread t2(&myThread);
+//	thread t3(&myThread);
+//	thread t4(&myThread);
+//	thread t5(&myThread);
+//	t1.join();
+//	t2.join();
+//	t3.join();
+//	t4.join();
+//	t5.join();
+//	return 0;
+//}
 
