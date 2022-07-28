@@ -28,8 +28,8 @@ public:
 //		delete data;
 //		data = nullptr;
 //	}
-//	Singleton(const Singleton&)= delete;;// 私有化拷贝构造
-//	Singleton& operator=(const Singleton&)= delete;;// 私有化赋值运算符
+//	Singleton(const Singleton&)= delete;// 私有化拷贝构造
+//	Singleton& operator=(const Singleton&)= delete;// 私有化赋值运算符
 //	Data* data;
 //public:
 //	static Singleton& getInstance() { // 被引用时才初始化，且由于是局部静态变量，多次引用时仅分配一次空间
@@ -37,8 +37,8 @@ public:
 //		return instance;
 //	}
 //};
-
-// 饿汉式
+//
+// //饿汉式
 //class Singleton {
 //private:
 //	Singleton() { data = new Data();}
@@ -46,8 +46,8 @@ public:
 //		delete data;
 //		data = nullptr;
 //	}
-//	Singleton(const Singleton&)= delete;;
-//	Singleton& operator=(const Singleton&= delete;);
+//	Singleton(const Singleton&)= delete;
+//	Singleton& operator=(const Singleton&) = delete;
 //	Data* data;
 //	static Singleton instance;
 //	
@@ -112,21 +112,24 @@ Singleton::Release Singleton::release;
 
 void myThread() {
 	Singleton::getInstance();
+	cout << "调用实例" << endl;
 }
 
-//int main() {
-//	cout << "========" << endl;
-//	thread t1(&myThread);
-//	//Sleep(1000); // 加1s之后就不会再加锁，不加的话由于线程切换会重复加锁，但只调用一次构造函数
-//	thread t2(&myThread);
-//	thread t3(&myThread);
-//	thread t4(&myThread);
-//	thread t5(&myThread);
-//	t1.join();
-//	t2.join();
-//	t3.join();
-//	t4.join();
-//	t5.join();
-//	return 0;
-//}
+int main() {
+	// 用横杠验证单例构造是在main()函数之前还是之后
+	// 如果是饿汗式，会在main函数之前，懒汉式则在第一次引用之后
+	cout << "========" << endl;
+	thread t1(&myThread);
+	//Sleep(1000); // 加1s之后就不会再加锁，不加的话由于线程切换会重复加锁，但只调用一次构造函数
+	thread t2(&myThread);
+	thread t3(&myThread);
+	thread t4(&myThread);
+	thread t5(&myThread);
+	t1.join();
+	t2.join();
+	t3.join();
+	t4.join();
+	t5.join();
+	return 0;
+}
 

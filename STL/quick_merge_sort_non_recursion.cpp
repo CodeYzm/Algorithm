@@ -39,17 +39,57 @@ void quickSort_non_recur(vector<int>&arr) {
 	}
 }
 
+void merge(vector<int>& arr, int left, int mid, int right) {
+	if (left >= right) return;
+	vector<int>tmp(right - left + 1);
+	int i = left, j = mid + 1, idx = -1;
+	while (i <= mid && j <= right) {
+		if (arr[i] <= arr[j]) {
+			tmp[++idx] = arr[i];
+			++i;
+		}
+		else {
+			tmp[++idx] = arr[j];
+			++j;
+		} 
+	}
+	while (i <= mid) tmp[++idx] = arr[i++];
+	while (j <= right) tmp[++idx] = arr[j++];
+	for (i = left; i <= right; ++i) arr[i] = tmp[i - left];
+}
+
+void mergeSort_non_recur(vector<int>& arr) {
+	stack<int>stk;
+	int n = arr.size() - 1;
+	// 按递归序列长度循环[1, 2, 4, ...]
+	for (int i = 1; i <= n; i <<= 1) {
+		int left = 0, mid = left + i - 1, right = mid + i;
+		// 合并相邻同等长度序列，并更新索引
+		while (right <= n) {
+			merge(arr, left, mid, right);
+			// 从上一个处理的子序列最后一个下标开始
+			left = right + 1;
+			mid = left + i - 1;
+			right = mid + i;
+		}
+		// 考虑 right = mid + i 可能越界的情况
+		if (right > n && left <= n && mid <= n) merge(arr, left, mid, n);
+	}
+}
+
 void print(vector<int>& arr) {
 	for (const int& num : arr) {
 		cout << num << " ";
 	}
 	cout << endl;
 }
-int main() {
-	vector<int>arr(10);
-	for (int i = 0; i < 10; ++i) arr[i] = rand() % 20;
-	print(arr);
-	quickSort_non_recur(arr); // 排序并对比排序前后数组
-	print(arr);
-	return 0;
-}
+
+//int main() {
+//	vector<int>arr(10);
+//	for (int i = 0; i < 10; ++i) arr[i] = rand() % 20;
+//	print(arr);
+//	//quickSort_non_recur(arr); // 排序并对比排序前后数组
+//	mergeSort_non_recur(arr);
+//	print(arr);
+//	return 0;
+//}
