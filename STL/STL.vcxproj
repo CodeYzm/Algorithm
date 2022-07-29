@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="abstract_factory.cpp" />
     <ClCompile Include="Ctest.cpp" />
     <ClCompile Include="heap.cpp" />
     <ClCompile Include="interview.cpp" />
@@ -147,11 +148,13 @@
     <ClCompile Include="ListNode.cpp" />
     <ClCompile Include="LRU.cpp" />
     <ClCompile Include="LRU_Timeout.cpp" />
+    <ClCompile Include="method_factory.cpp" />
     <ClCompile Include="move_test.cpp" />
     <ClCompile Include="public_protected_private.cpp" />
     <ClCompile Include="quick_merge_sort_non_recursion.cpp" />
     <ClCompile Include="rand_transform.cpp" />
     <ClCompile Include="sample_hashmap.cpp" />
+    <ClCompile Include="simple_factory.cpp" />
     <ClCompile Include="singleton.cpp" />
     <ClCompile Include="sort.cpp" />
   </ItemGroup>

@@ -1,17 +1,13 @@
 #include<iostream>
 using namespace std;
 
-template<typename T>
+template<typename T> // struct可以用模板
 struct A {
-
 public:
 	T data;
 	~A() {
 	
 	}
-private:
-
-
 };
 
 
@@ -21,7 +17,8 @@ private:
 protected:
 	int salary;
 public:
-	friend Friend;
+	friend class Friend; // 友元类
+	friend int visit(Person& p); // 友元函数
 	int age;
 	Person() {}
 	Person(int _id, int _salary, int _age):id(_id), salary(_salary), age(_age) { }
@@ -36,6 +33,7 @@ public:
 	}
 };
 
+// 三种继承方式
 class Worker :protected Person {
 public:
 	Worker() {
@@ -68,8 +66,13 @@ public:
 	}
 };
 
-int main() {
-	Person p;
-	cout << p.age << endl;
-	return 0;
+int visit(Person& p) {
+	return p.id;
 }
+
+
+//int main() {
+//	Person p;
+//	cout << p.age << endl;
+//	return 0;
+//}
