@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Ctest.cpp" />
     <ClCompile Include="heap.cpp" />
+    <ClCompile Include="interview.cpp" />
     <ClCompile Include="LFU_logn.cpp" />
     <ClCompile Include="LFU_O(1).cpp" />
     <ClCompile Include="ListNode.cpp" />

@@ -57,6 +57,9 @@
     <ClCompile Include="public_protected_private.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="interview.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sample_hashmap.h">
