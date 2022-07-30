@@ -1,80 +1,83 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="源文件">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="头文件">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="资源文件">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="源文件\Design mode">
-      <UniqueIdentifier>{454ad4a6-0a12-4f47-b886-116071ba9871}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="sort.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="heap.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="sample_hashmap.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Ctest.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="LRU.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="LRU_Timeout.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="LFU_logn.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="LFU_O(1).cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ListNode.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="move_test.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="rand_transform.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="quick_merge_sort_non_recursion.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="public_protected_private.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="smart_ptr.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="interview.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="singleton.cpp">
-      <Filter>源文件\Design mode</Filter>
-    </ClCompile>
-    <ClCompile Include="simple_factory.cpp">
-      <Filter>源文件\Design mode</Filter>
+    <ClCompile Include="abstract_factory.cpp">
+      <Filter>源文件\Design Mode</Filter>
     </ClCompile>
     <ClCompile Include="method_factory.cpp">
-      <Filter>源文件\Design mode</Filter>
+      <Filter>源文件\Design Mode</Filter>
     </ClCompile>
-    <ClCompile Include="abstract_factory.cpp">
-      <Filter>源文件\Design mode</Filter>
+    <ClCompile Include="singleton.cpp">
+      <Filter>源文件\Design Mode</Filter>
     </ClCompile>
+    <ClCompile Include="simple_factory.cpp">
+      <Filter>源文件\Design Mode</Filter>
+    </ClCompile>
+    <ClCompile Include="heap.cpp">
+      <Filter>源文件\Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="LFU_logn.cpp">
+      <Filter>源文件\Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="LFU_O(1).cpp">
+      <Filter>源文件\Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="LRU.cpp">
+      <Filter>源文件\Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="LRU_Timeout.cpp">
+      <Filter>源文件\Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="sort.cpp">
+      <Filter>源文件\Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="rand_transform.cpp">
+      <Filter>源文件\Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="quick_merge_sort_non_recursion.cpp">
+      <Filter>源文件\Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="ListNode.cpp">
+      <Filter>源文件\STL</Filter>
+    </ClCompile>
+    <ClCompile Include="sample_hashmap.cpp">
+      <Filter>源文件\STL</Filter>
+    </ClCompile>
+    <ClCompile Include="smart_ptr.cpp">
+      <Filter>源文件\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="public_protected_private.cpp">
+      <Filter>源文件\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="move_test.cpp">
+      <Filter>源文件\C++</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{3f3f1c8e-3539-4e48-a1a0-753119455e8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{c7e7862d-7611-4197-ac96-5d4d2ec13791}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Design Mode">
+      <UniqueIdentifier>{ce3800af-de0c-4a87-9502-189d3a4c5a81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Algorithm">
+      <UniqueIdentifier>{5045a275-a532-4802-ae63-eed69cb91688}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\STL">
+      <UniqueIdentifier>{9fb75f86-4562-4fa8-830c-6ebf6df33a2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\C++">
+      <UniqueIdentifier>{4869cb75-6333-4530-ad66-b1b0abe0ca56}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sample_hashmap.h">
