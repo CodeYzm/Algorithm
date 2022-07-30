@@ -57,7 +57,7 @@ public:
 //		return instance;
 //	}
 //};
-//Singleton Singleton::instance; // 声明并初始化静态成员
+//Singleton Singleton::instance; // 定义并初始化静态成员
 
 
 /*
@@ -88,7 +88,7 @@ private:
 private:
 	static Release release; // 释放资源的嵌套类，让程序结束时能够自动释放资源，也要设置为静态成员，生命周期和单例一致！！
 	Data* data; // 数据
-	static atomic<Singleton*> instance; // 定义为原子变量
+	static atomic<Singleton*> instance; // 声明为原子变量
 	static mutex m_utex; // 全局锁
 public:
 	static Singleton* getInstance() { // 被引用时才初始化，且由于是局部静态变量，多次引用时仅分配一次空间
@@ -106,7 +106,7 @@ public:
 		return tmp;
 	}
 };
-atomic<Singleton*> Singleton::instance; //类外声明静态成员(这里并非初始化！！！所以依然是懒汉模式)
+atomic<Singleton*> Singleton::instance; //类外定义静态成员(这里并非初始化！！！所以依然是懒汉模式)
 mutex Singleton::m_utex;
 Singleton::Release Singleton::release;
 

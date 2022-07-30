@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\Design mode">
+      <UniqueIdentifier>{454ad4a6-0a12-4f47-b886-116071ba9871}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sort.cpp">
@@ -48,14 +51,29 @@
     <ClCompile Include="rand_transform.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="singleton.cpp">
+    <ClCompile Include="quick_merge_sort_non_recursion.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="quick_merge_sort_non_recursion.cpp">
+    <ClCompile Include="public_protected_private.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="smart_ptr.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="interview.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="singleton.cpp">
+      <Filter>源文件\Design mode</Filter>
+    </ClCompile>
+    <ClCompile Include="simple_factory.cpp">
+      <Filter>源文件\Design mode</Filter>
+    </ClCompile>
+    <ClCompile Include="method_factory.cpp">
+      <Filter>源文件\Design mode</Filter>
+    </ClCompile>
+    <ClCompile Include="abstract_factory.cpp">
+      <Filter>源文件\Design mode</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
