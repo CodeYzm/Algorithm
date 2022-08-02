@@ -81,18 +81,18 @@ public:
 };
 
 
-int main() {
-	// 看看两个牌子的计算器是否可用
-	AddFactory add_factory;
-	Caculator1* add1 = add_factory.create_caculator1();
-	Caculator2* add2 = add_factory.create_caculator2();
-	add1->caculate1(1,2);
-	add2->caculate2(1, 2);
-	MinusFactory minus_factory;
-	Caculator1* minus1 = minus_factory.create_caculator1();
-	Caculator2* minus2 = minus_factory.create_caculator2();
-	minus1->caculate1(1, 2);
-	minus2->caculate2(1, 2);
-	delete add1; delete add2; delete minus1; delete minus2;
-	return 0;
-}
+//int main() {
+//	// 看看两个牌子的计算器是否可用
+//	AddFactory add_factory;
+//	Caculator1* add1 = add_factory.create_caculator1();
+//	Caculator2* add2 = add_factory.create_caculator2();
+//	add1->caculate1(1,2);
+//	add2->caculate2(1, 2);
+//	MinusFactory minus_factory;
+//	Caculator1* minus1 = minus_factory.create_caculator1();
+//	Caculator2* minus2 = minus_factory.create_caculator2();
+//	minus1->caculate1(1, 2);
+//	minus2->caculate2(1, 2);
+//	delete add1; delete add2; delete minus1; delete minus2;
+//	return 0;
+//}

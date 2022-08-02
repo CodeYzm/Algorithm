@@ -58,6 +58,12 @@
     <ClCompile Include="move_test.cpp">
       <Filter>源文件\C++</Filter>
     </ClCompile>
+    <ClCompile Include="Facade.cpp">
+      <Filter>源文件\Design Mode</Filter>
+    </ClCompile>
+    <ClCompile Include="Facade_Singleton.cpp">
+      <Filter>源文件\Design Mode</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="源文件">

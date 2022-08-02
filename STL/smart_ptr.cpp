@@ -25,8 +25,8 @@ void circular_reference() {
 	cout << a.use_count() << endl;
 	cout << b.use_count() << endl;
 }
-
-int main() {
-	circular_reference();
-	return 0;
-}
+//
+//int main() {
+//	circular_reference();
+//	return 0;
+//}
