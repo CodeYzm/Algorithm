@@ -62,8 +62,8 @@ public:
 };
 
 
-int main() {
-	Buy buy;
-	buy.run();
-	return 0;
-}
+//int main() {
+//	Buy buy;
+//	buy.run();
+//	return 0;
+//}

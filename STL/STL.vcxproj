@@ -152,6 +152,8 @@
     <ClCompile Include="LRU_Timeout.cpp" />
     <ClCompile Include="method_factory.cpp" />
     <ClCompile Include="move_test.cpp" />
+    <ClCompile Include="Observer.cpp" />
+    <ClCompile Include="Observer_template.cpp" />
     <ClCompile Include="public_protected_private.cpp" />
     <ClCompile Include="quick_merge_sort_non_recursion.cpp" />
     <ClCompile Include="rand_transform.cpp" />
@@ -160,6 +162,8 @@
     <ClCompile Include="singleton.cpp" />
     <ClCompile Include="smart_ptr.cpp" />
     <ClCompile Include="sort.cpp" />
+    <ClCompile Include="template_reference.cpp" />
+    <ClCompile Include="variadic_template.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sample_hashmap.h" />

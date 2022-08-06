@@ -64,6 +64,18 @@
     <ClCompile Include="Facade_Singleton.cpp">
       <Filter>源文件\Design Mode</Filter>
     </ClCompile>
+    <ClCompile Include="Observer.cpp">
+      <Filter>源文件\Design Mode</Filter>
+    </ClCompile>
+    <ClCompile Include="template_reference.cpp">
+      <Filter>源文件\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="variadic_template.cpp">
+      <Filter>源文件\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="Observer_template.cpp">
+      <Filter>源文件\Design Mode</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="源文件">
