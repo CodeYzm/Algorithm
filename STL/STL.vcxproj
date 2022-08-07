@@ -140,9 +140,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="abstract_factory.cpp" />
+    <ClCompile Include="binary_indexed_tree.cpp" />
     <ClCompile Include="Ctest.cpp" />
+    <ClCompile Include="Discretization.cpp" />
     <ClCompile Include="Facade.cpp" />
     <ClCompile Include="Facade_Singleton.cpp" />
+    <ClCompile Include="Functor.cpp" />
     <ClCompile Include="heap.cpp" />
     <ClCompile Include="interview.cpp" />
     <ClCompile Include="LFU_logn.cpp" />

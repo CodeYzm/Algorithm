@@ -76,6 +76,15 @@
     <ClCompile Include="Observer_template.cpp">
       <Filter>源文件\Design Mode</Filter>
     </ClCompile>
+    <ClCompile Include="Functor.cpp">
+      <Filter>源文件\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="Discretization.cpp">
+      <Filter>源文件\Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="binary_indexed_tree.cpp">
+      <Filter>源文件\Algorithm</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="源文件">

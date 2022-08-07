@@ -77,12 +77,12 @@ void mergeSort_non_recur(vector<int>& arr) {
 	}
 }
 
-void print(vector<int>& arr) {
-	for (const int& num : arr) {
-		cout << num << " ";
-	}
-	cout << endl;
-}
+//void print(vector<int>& arr) {
+//	for (const int& num : arr) {
+//		cout << num << " ";
+//	}
+//	cout << endl;
+//}
 
 //int main() {
 //	vector<int>arr(10);
