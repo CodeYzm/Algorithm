@@ -85,6 +85,12 @@
     <ClCompile Include="binary_indexed_tree.cpp">
       <Filter>源文件\Algorithm</Filter>
     </ClCompile>
+    <ClCompile Include="placement_new.cpp">
+      <Filter>源文件\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="var_template.cpp">
+      <Filter>源文件\C++</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="源文件">
