@@ -3,10 +3,6 @@
 #include<vector>
 #include<string>
 using namespace std;
-int cnt = 0;
-static void print() {
-	cout << cnt << endl;
-}
 
 //int main() {
 //	cout << "char : " << sizeof(char) << "×Ö½Ú" << endl;

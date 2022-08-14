@@ -91,6 +91,12 @@
     <ClCompile Include="var_template.cpp">
       <Filter>源文件\C++</Filter>
     </ClCompile>
+    <ClCompile Include="test_datasize.cpp">
+      <Filter>源文件\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="mem_alignment_struct.cpp">
+      <Filter>源文件\C++</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="源文件">
