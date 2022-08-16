@@ -97,6 +97,9 @@
     <ClCompile Include="mem_alignment_struct.cpp">
       <Filter>源文件\C++</Filter>
     </ClCompile>
+    <ClCompile Include="sort_list.cpp">
+      <Filter>源文件\Algorithm</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="源文件">

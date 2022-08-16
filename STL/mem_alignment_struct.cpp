@@ -17,8 +17,8 @@ struct B {
 	// 目前结构体A存储范围0-31，总共32个字节
 	// 根据规则4，符合8的整数倍，因此最终结果sizeof(B) = 4 * 8 = 32
 };
-int main() {
-    cout << sizeof(A) << endl;
-	cout << sizeof(B) << endl;
-	return 0;
-}
+//int main() {
+//    cout << sizeof(A) << endl;
+//	cout << sizeof(B) << endl;
+//	return 0;
+//}
