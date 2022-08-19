@@ -42,31 +42,31 @@ public:
 
 class Factory {
 public:
-	virtual Factory* create_factory() = 0;
+	virtual Caculator* create_factory() = 0;
 };
 
-class AddFactory {
+class AddFactory : public Factory {
 public:
 	Caculator* create_factory() {
 		return new Add();
 	}
 };
 
-class MinusFactory {
+class MinusFactory : public Factory {
 public:
 	Caculator* create_factory() {
 		return new Minus();
 	}
 };
 
-class MultiplyFactory {
+class MultiplyFactory : public Factory {
 public:
 	Caculator* create_factory() {
 		return new Multiply();
 	}
 };
 
-class DivideFactory {
+class DivideFactory : public Factory {
 public:
 	Caculator* create_factory() {
 		return new Divide();
