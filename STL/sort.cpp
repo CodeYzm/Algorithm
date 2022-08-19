@@ -219,23 +219,23 @@ void radixSort(vector<int>& nums) {
 }
 
 
-int main() {
-	srand((unsigned)time(NULL));
-	vector<int>nums(10);
-	for (int i = 0; i < 10; ++i) {
-		nums[i] = rand() % 100;
-	}
-	printArray(nums);
-	//bubbleSort(nums);
-	//selectSort(nums);
-	//mergeSort(nums);
-	//quickSort(nums);
-	//insertionSort(nums);
-	//shellSort(nums);
-	//heapSort(nums);
-	//countSort(nums);
-	//bucketSort(nums);
-	//radixSort(nums);
-	printArray(nums);
-	return 0;
-}
+//int main() {
+//	srand((unsigned)time(NULL));
+//	vector<int>nums(10);
+//	for (int i = 0; i < 10; ++i) {
+//		nums[i] = rand() % 100;
+//	}
+//	printArray(nums);
+//	//bubbleSort(nums);
+//	//selectSort(nums);
+//	//mergeSort(nums);
+//	//quickSort(nums);
+//	//insertionSort(nums);
+//	//shellSort(nums);
+//	//heapSort(nums);
+//	//countSort(nums);
+//	//bucketSort(nums);
+//	//radixSort(nums);
+//	printArray(nums);
+//	return 0;
+//}

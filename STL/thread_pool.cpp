@@ -59,10 +59,11 @@ public:
 	void do_task() {
 		while (!isEnd.load()) {
 			unique_lock<mutex>ulock(mtx);
-			cond.wait(ulock, 
-				[this] {
-					return this->isEnd.load() || !q.empty();
-				});
+			//cond.wait(ulock, 
+			//	[this] {
+			//		return this->isEnd.load() || !q.empty();
+			//	});
+			cond.wait(ulock);
 			if (this->isEnd.load() && q.empty()) return;
 			if (q.empty()) continue;
 			T* task = q.front();
@@ -80,13 +81,11 @@ public:
 //int main() {
 //	threadPool<Work>* tp = new threadPool<Work>();
 //	Work* w = new Work();
-//	tp->add_task(w);
-//	tp->add_task(w);
-//	tp->add_task(w);
-//	tp->add_task(w);
-//	tp->add_task(w);
+//	for (int i = 0; i < 10; ++i) {
+//		tp->add_task(w);
+//		Sleep(1000);
+//	}
 //	delete w;
 //	delete tp;
-//	Sleep(2000);
 //	return 0;
 //}
