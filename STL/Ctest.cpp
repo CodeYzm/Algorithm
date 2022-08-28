@@ -10,11 +10,11 @@ public:
     }
 };
 
-int main() {
-    W w;
-    w.b = 2;
-    cout << w * 4 << endl;
-    cout << 4 (::*) w << endl;
-    cout << w.operator*(4) << endl;
-    return 0;
-}
+//int main() {
+//    W w;
+//    w.b = 2;
+//    cout << w * 4 << endl;
+//    cout << 4 (::*) w << endl;
+//    cout << w.operator*(4) << endl;
+//    return 0;
+//}
