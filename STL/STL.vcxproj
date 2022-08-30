@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="abstract_factory.cpp" />
     <ClCompile Include="binary_indexed_tree.cpp" />
+    <ClCompile Include="charPtr_charArr.cpp" />
     <ClCompile Include="Ctest.cpp" />
     <ClCompile Include="Discretization.cpp" />
     <ClCompile Include="Facade.cpp" />
@@ -156,6 +157,7 @@
     <ClCompile Include="mem_alignment_struct.cpp" />
     <ClCompile Include="method_factory.cpp" />
     <ClCompile Include="move_test.cpp" />
+    <ClCompile Include="operator_reload.cpp" />
     <ClCompile Include="placement_new.cpp" />
     <ClCompile Include="Observer.cpp" />
     <ClCompile Include="Observer_template.cpp" />

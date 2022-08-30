@@ -106,6 +106,12 @@
     <ClCompile Include="thread_pool.cpp">
       <Filter>源文件\Coding Demo</Filter>
     </ClCompile>
+    <ClCompile Include="operator_reload.cpp">
+      <Filter>源文件\EXAM</Filter>
+    </ClCompile>
+    <ClCompile Include="charPtr_charArr.cpp">
+      <Filter>源文件\EXAM</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="源文件">
@@ -128,6 +134,9 @@
     </Filter>
     <Filter Include="源文件\Coding Demo">
       <UniqueIdentifier>{0b1ad97c-b72c-4e6b-8ac1-1503957d2033}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\EXAM">
+      <UniqueIdentifier>{7064c442-41e7-436c-b2c9-d55bb4f7c259}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

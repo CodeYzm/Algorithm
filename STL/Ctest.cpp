@@ -1,20 +1,24 @@
+#pragma pack(1)
 #include<iostream>
 #include<cstdio>
 using namespace std;
 
-class W {
-public:
-    int b;
-    int operator*(int a) {
-        return  a + b;
-    }
-};
 
+void test() {
+	int i = 0, j = 0;
+	int k = 8;
+	if (++i > 0 || j++ > 0) ++k;
+	cout << i << j << k;
+}
+struct A {
+	int b;
+	double a;
+	char c;
+};
 //int main() {
-//    W w;
-//    w.b = 2;
-//    cout << w * 4 << endl;
-//    cout << 4 (::*) w << endl;
-//    cout << w.operator*(4) << endl;
-//    return 0;
+//
+//	//test();
+//	cout << sizeof(A) << endl;
+//	// cout << sizeof(B) << endl;
+//	return 0;
 //}
