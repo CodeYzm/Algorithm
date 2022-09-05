@@ -112,6 +112,18 @@
     <ClCompile Include="charPtr_charArr.cpp">
       <Filter>源文件\EXAM</Filter>
     </ClCompile>
+    <ClCompile Include="lockless_queue.cpp">
+      <Filter>源文件\Coding Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="if_ifdef_ifndef_endif.cpp">
+      <Filter>源文件\C++</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_pool_cas.cpp">
+      <Filter>源文件\Coding Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="enum.cpp">
+      <Filter>源文件\C++</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="源文件">

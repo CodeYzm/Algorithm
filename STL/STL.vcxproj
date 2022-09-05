@@ -144,14 +144,17 @@
     <ClCompile Include="charPtr_charArr.cpp" />
     <ClCompile Include="Ctest.cpp" />
     <ClCompile Include="Discretization.cpp" />
+    <ClCompile Include="enum.cpp" />
     <ClCompile Include="Facade.cpp" />
     <ClCompile Include="Facade_Singleton.cpp" />
     <ClCompile Include="Functor.cpp" />
     <ClCompile Include="heap.cpp" />
+    <ClCompile Include="if_ifdef_ifndef_endif.cpp" />
     <ClCompile Include="interview.cpp" />
     <ClCompile Include="LFU_logn.cpp" />
     <ClCompile Include="LFU_O(1).cpp" />
     <ClCompile Include="ListNode.cpp" />
+    <ClCompile Include="lockless_queue.cpp" />
     <ClCompile Include="LRU.cpp" />
     <ClCompile Include="LRU_Timeout.cpp" />
     <ClCompile Include="mem_alignment_struct.cpp" />
@@ -174,6 +177,7 @@
     <ClCompile Include="template_reference.cpp" />
     <ClCompile Include="test_datasize.cpp" />
     <ClCompile Include="thread_pool.cpp" />
+    <ClCompile Include="thread_pool_cas.cpp" />
     <ClCompile Include="variadic_template.cpp" />
     <ClCompile Include="var_template.cpp" />
   </ItemGroup>

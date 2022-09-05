@@ -1,24 +1,17 @@
-#pragma pack(1)
-#include<iostream>
-#include<cstdio>
+#pragma once
+#include <iostream>
+#include <string>
 using namespace std;
 
+class A {
 
-void test() {
-	int i = 0, j = 0;
-	int k = 8;
-	if (++i > 0 || j++ > 0) ++k;
-	cout << i << j << k;
-}
-struct A {
-	int b;
-	double a;
-	char c;
 };
+
+class B : public A {
+
+};
+
 //int main() {
-//
-//	//test();
-//	cout << sizeof(A) << endl;
-//	// cout << sizeof(B) << endl;
-//	return 0;
+//    B *b = static_cast<B*>(new A());
+//    return 0;
 //}
