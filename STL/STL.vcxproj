@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="abstract_factory.cpp" />
     <ClCompile Include="binary_indexed_tree.cpp" />
+    <ClCompile Include="caculator.h" />
     <ClCompile Include="charPtr_charArr.cpp" />
     <ClCompile Include="Ctest.cpp" />
     <ClCompile Include="Discretization.cpp" />
@@ -165,6 +166,7 @@
     <ClCompile Include="Observer.cpp" />
     <ClCompile Include="Observer_template.cpp" />
     <ClCompile Include="productor_consumer.cpp" />
+    <ClCompile Include="Proxy.cpp" />
     <ClCompile Include="public_protected_private.cpp" />
     <ClCompile Include="quick_merge_sort_non_recursion.cpp" />
     <ClCompile Include="rand_transform.cpp" />

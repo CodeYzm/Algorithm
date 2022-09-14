@@ -1,17 +1,25 @@
-#pragma once
-#include <iostream>
-#include <string>
+#include<iostream>
+#include"caculator.h"
 using namespace std;
 
-class A {
-
-};
-
-class B : public A {
-
+union A {
+	int a;
+	char b[2];
 };
 
 //int main() {
-//    B *b = static_cast<B*>(new A());
+//	A a1;
+//	a1.a = 10;
+//	a1.b[0] = 0;
+//	a1.b[1] = 1;
+//
+//	A a2;
+//	a1.b[0] = 0;
+//	a1.b[1] = 1;
+//	a2.a = 10;
+//	tt = 10;
+//	cout << (a1.a | a2.a) << endl;
+//	cout << ((a1.b[1] ^ a2.b[1]) | (a1.b[0] ^ a2.b[0])) << endl;
+//	cout << tt << endl;
 //    return 0;
 //}
