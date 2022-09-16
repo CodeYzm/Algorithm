@@ -130,6 +130,12 @@
     <ClCompile Include="Proxy.cpp">
       <Filter>源文件\Design Mode</Filter>
     </ClCompile>
+    <ClCompile Include="unionStorage.cpp">
+      <Filter>源文件\EXAM</Filter>
+    </ClCompile>
+    <ClCompile Include="memcpy.cpp">
+      <Filter>源文件\Algorithm</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="源文件">

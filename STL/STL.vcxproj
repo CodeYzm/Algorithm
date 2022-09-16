@@ -158,6 +158,7 @@
     <ClCompile Include="lockless_queue.cpp" />
     <ClCompile Include="LRU.cpp" />
     <ClCompile Include="LRU_Timeout.cpp" />
+    <ClCompile Include="memcpy.cpp" />
     <ClCompile Include="mem_alignment_struct.cpp" />
     <ClCompile Include="method_factory.cpp" />
     <ClCompile Include="move_test.cpp" />
@@ -180,6 +181,7 @@
     <ClCompile Include="test_datasize.cpp" />
     <ClCompile Include="thread_pool.cpp" />
     <ClCompile Include="thread_pool_cas.cpp" />
+    <ClCompile Include="unionStorage.cpp" />
     <ClCompile Include="variadic_template.cpp" />
     <ClCompile Include="var_template.cpp" />
   </ItemGroup>
