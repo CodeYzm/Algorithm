@@ -20,26 +20,26 @@ void func(int* a) {
     //*a = 10;
 }
 
-int main() {
-
-    //int* a = new int(20);
-    //func(a);
-    //cout << *a << endl;
-    //int a = 5;
-    //a += (a++);
-    //cout << a << endl;
-    //int s[2] = { 0,1 };
-    //int* p = s;
-    //s += 1;
-   // p += 1;
-    int* a = nullptr;
-    cout << sizeof(a) << endl;
-    string s("hello");
-    cout << s.size() << " " << sizeof(s) << endl;
-    vector<int>arr;
-    cout << arr.capacity() << sizeof(arr) << endl;
-    return 0;
-}
+//int main() {
+//
+//    //int* a = new int(20);
+//    //func(a);
+//    //cout << *a << endl;
+//    //int a = 5;
+//    //a += (a++);
+//    //cout << a << endl;
+//    //int s[2] = { 0,1 };
+//    //int* p = s;
+//    //s += 1;
+//   // p += 1;
+//    //int* a = nullptr;
+//    //cout << sizeof(a) << endl;
+//    //string s("hello");
+//    //cout << s.size() << " " << sizeof(s) << endl;
+//    //vector<int>arr;
+//    //cout << arr.capacity() << sizeof(arr) << endl;
+//    return 0;
+//}
 
 
 //unsigned int a = 2; int b = -3;
