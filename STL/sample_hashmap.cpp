@@ -39,7 +39,7 @@ void HashTable<T>::erase(T val) {
 				pre->next = cur->next;
 				delete cur;
 			}
-			return;
+			break;
 		}
 		pre = cur;
 		cur = cur->next;

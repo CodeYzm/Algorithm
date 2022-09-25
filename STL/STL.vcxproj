@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="220925.cpp" />
     <ClCompile Include="abstract_factory.cpp" />
     <ClCompile Include="binary_indexed_tree.cpp" />
     <ClCompile Include="caculator.h" />
