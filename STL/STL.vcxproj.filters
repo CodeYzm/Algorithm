@@ -139,6 +139,9 @@
     <ClCompile Include="220925.cpp">
       <Filter>源文件\EXAM</Filter>
     </ClCompile>
+    <ClCompile Include="shared_ptr.cpp">
+      <Filter>源文件\Coding Demo</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="源文件">
