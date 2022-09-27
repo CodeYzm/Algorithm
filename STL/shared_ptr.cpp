@@ -20,7 +20,7 @@ private:
 public:
 	SharedPtr()noexcept = default; // 默认构造
 	SharedPtr(nullptr_t)noexcept :SharedPtr() {} // 空指针构造
-	SharedPtr(T* ptr)noexcept :origin_ptr(ptr), refCount(nullptr){ // 用原始指针作为参数构造
+	explicit SharedPtr(T* ptr)noexcept :origin_ptr(ptr), refCount(nullptr){ // 用原始指针作为参数构造
 		if (origin_ptr != nullptr) refCount = new RefCount();
 	}
 	SharedPtr(const SharedPtr& ptr)noexcept :origin_ptr(ptr.origin_ptr), refCount(ptr.refCount) { // 拷贝构造
