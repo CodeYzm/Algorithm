@@ -73,8 +73,9 @@ public: // 以下是提供的接口函数
 		return refCount == nullptr ? false : (refCount->use_count() == 1);
 	}
 	void swap(SharedPtr& rhs) noexcept{ // swap()交换对象内容
-		std::swap(origin_ptr, rhs.origin_ptr); // 这里必须显示指定是std命名空间！
-		std::swap(refCount, rhs.refCount);
+		using std::swap; // 令std::swap在此函数内可用，不显示指定std中的swap版本是为了防止T专属的swap版本得不到调用
+		swap(origin_ptr, rhs.origin_ptr); 
+		swap(refCount, rhs.refCount);
 	}
 };
 

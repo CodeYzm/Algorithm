@@ -19,6 +19,8 @@ public:
 //	int b = a.operator int();
 //	int c = int(a);
 //	cout << b << endl;
+//	char s[3] = { 'h','e' ,'\0'}; // 如果是数组，内部必须有终止符
+//	cout << strlen(s) << endl;
 //	return 0;
 //}
 

@@ -151,6 +151,7 @@
     <ClCompile Include="Facade_Singleton.cpp" />
     <ClCompile Include="Functor.cpp" />
     <ClCompile Include="heap.cpp" />
+    <ClCompile Include="HUAWEI_20220928_03.cpp" />
     <ClCompile Include="if_ifdef_ifndef_endif.cpp" />
     <ClCompile Include="interview.cpp" />
     <ClCompile Include="LFU_logn.cpp" />
@@ -189,6 +190,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sample_hashmap.h" />
+    <ClInclude Include="yzm_box.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
