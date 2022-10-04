@@ -145,6 +145,9 @@
     <ClCompile Include="HUAWEI_20220928_03.cpp">
       <Filter>源文件\EXAM</Filter>
     </ClCompile>
+    <ClCompile Include="HUAWEI_20220928_02.cpp">
+      <Filter>源文件\EXAM</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="源文件">
