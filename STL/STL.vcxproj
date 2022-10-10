@@ -151,6 +151,7 @@
     <ClCompile Include="Facade_Singleton.cpp" />
     <ClCompile Include="Functor.cpp" />
     <ClCompile Include="heap.cpp" />
+    <ClCompile Include="HUAWEI_20220928_01.cpp" />
     <ClCompile Include="HUAWEI_20220928_02.cpp" />
     <ClCompile Include="HUAWEI_20220928_03.cpp" />
     <ClCompile Include="if_ifdef_ifndef_endif.cpp" />
