@@ -1,145 +1,77 @@
 #include<iostream>
 #include<stdio.h>
-#include<functional>
-#include<vector>
-#include<queue>
+#include<stack>
 using namespace std;
 
-class Solution {
-private:
-    struct TreeNode {
-        TreeNode* left, * right;
-        int val, lazy;
-        TreeNode() :left(nullptr), right(nullptr), val(0), lazy(0) {}
-        TreeNode(int _val, int _lazy) :left(nullptr), right(nullptr), val(_val), lazy(_lazy) {}
-    };
-    TreeNode* root;
-    TreeNode* buildTree(int curLeft, int curRight) {
-        if (curLeft > curRight) return nullptr;
-        else if (curLeft == curRight) {
-            TreeNode* node = new TreeNode();
-            return node;
-        }
-        else {
-            int mid = curLeft + ((curRight - curLeft) >> 1);
-            TreeNode* node = new TreeNode();
-            node->left = buildTree(curLeft, mid);
-            node->right = buildTree(mid + 1, curRight);
-            return node;
-        }
-    }
+double getNum(string s) {
+	int n = s.size();
+	int i = 0;
+	double dWeight = 10;
+	bool flag = true;
+	double intNum = 0.0, doubleNUm = 0.0;
+	double res = 0.0;
+	while (i < n) {
+		if (s[i] == '.') {
+			flag = false;
+		}
+		else if (isdigit(s[i])) {
+			if (flag) {
+				intNum *= 10;
+				intNum += ((double)s[i] - '0');
+			}
+			else {
+				doubleNUm += ((double)s[i] - '0') / dWeight;
+				dWeight *= 10;
+			}
 
-    void pushUp(TreeNode* node) {
-        node->val = node->left->val + node->right->val;
-    }
-    void pushDown(TreeNode* node, int leftChild, int rightChild) {
-        if (node->lazy == 0) return;
+		}
+		else {
+			if (s[i] == '+') {
+				res += intNum + doubleNUm;
+			}
+			else {
+				res -= intNum + doubleNUm;
+			}
+			flag = true;
+			dWeight = 10;
+			intNum = 0.0; doubleNUm = 0.0;
+		}
+		++i;
+	}
+	return res;
+}
+int getString(string& s, int idx) {
+	while (idx < s.size()) {
+		if (isdigit(s[idx]) || s[idx] == '.')++idx;
+		else break;
+	}
+	return idx;
+}
+double getRes(string&s) {
+	int n = s.size();
+	int i = 0;
+	double res = 0.0;
+	while (i < n) {
+		if (s[i] == '+' || s[i] == '-') {
+			++i;
+			int right = getString(s, i);
+			double tmp = getNum(s.substr(i, right - i + 1));
+			if (s[i] == '+') res += tmp;
+			else res -= tmp;
+			i = right + 1;
+		}
+		else {
+			int right = getString(s, i);
+			double tmp = getNum(s.substr(i, right - i + 1));
+			res = tmp;
+			i = right + 1;
+		}
 
-        node->left->lazy += node->lazy;
-        node->left->val += leftChild * node->lazy;
-
-        node->right->lazy += node->lazy;
-        node->right->val += rightChild * node->lazy;
-
-        node->lazy = 0;
-    }
-    void update(TreeNode* node, int curLeft, int curRight, int updateLeft, int updateRight, int val) {
-        if (curLeft == updateLeft && curRight == updateRight) {
-            node->lazy += val;
-            node->val += (curRight - curLeft + 1) * val;
-            return;
-        }
-        int mid = curLeft + ((curRight - curLeft) >> 1);
-        if (mid < updateLeft) update(node->right, mid + 1, curRight, updateLeft, updateRight, val);
-        else if (mid >= updateRight) update(node->left, curLeft, mid, updateLeft, updateRight, val);
-        else {
-            update(node->left, curLeft, mid, updateLeft, mid, val);
-            update(node->right, mid + 1, curRight, mid + 1, updateRight, val);
-        }
-        pushUp(node);
-    }
-    int query(TreeNode* node, int curLeft, int curRight, int queryLeft, int queryRight) {
-        if (curLeft == queryLeft && curRight == queryRight) {
-            return node->val;
-        }
-        int mid = curLeft + ((curRight - curLeft) >> 1);
-        pushDown(node, mid - curLeft + 1, curRight - mid);
-        if (mid < queryLeft) return query(node->right, mid + 1, curRight, queryLeft, queryRight);
-        else if (mid >= queryRight) return query(node->left, curLeft, mid, queryLeft, queryRight);
-        else return query(node->left, curLeft, mid, queryLeft, mid) +
-            query(node->right, mid + 1, curRight, mid + 1, queryRight);
-    }
-public:
-    void init(int n) {
-        root = buildTree(1, n);
-    }
-    vector<int> corpFlightBookings(vector<vector<int>>& bookings, int n) {
-        init(n);
-        for (vector<int>& booking : bookings) {
-            update(root, 1, n, booking[0], booking[1], booking[2]);
-
-        }
-        vector<int>res(n);
-        for (int i = 0; i < n; ++i) {
-            res[i] = query(root, 1, n, i + 1, i + 1);
-        }
-        print_tree();
-        print_lazy();
-        return res;
-    }
-    void print_tree() {
-        if (root == nullptr) {
-            cout << "null" << endl;
-            return;
-        }
-        TreeNode* tmp = nullptr;
-        queue<TreeNode*>q;
-        q.emplace(root);
-        while (!q.empty()) {
-            int s = q.size();
-            for (int i = 0; i < s; ++i) {
-                tmp = q.front();
-                if (tmp == nullptr) cout << "null" << " ";
-                else {
-                    cout << tmp->val << " ";
-                    q.emplace(tmp->left);
-                    q.emplace(tmp->right);
-                }
-                q.pop();
-            }
-            cout << endl;
-        }
-
-    }
-    void print_lazy() {
-        if (root == nullptr) {
-            cout << "null" << endl;
-            return;
-        }
-        TreeNode* tmp = nullptr;
-        queue<TreeNode*>q;
-        q.emplace(root);
-        while (!q.empty()) {
-            int s = q.size();
-            for (int i = 0; i < s; ++i) {
-                tmp = q.front();
-                if (tmp == nullptr) cout << "null" << " ";
-                else {
-                    cout << tmp->lazy << " ";
-                    q.emplace(tmp->left);
-                    q.emplace(tmp->right);
-                }
-                q.pop();
-            }
-            cout << endl;
-        }
-
-    }
-};
-
-//int main() {
-//  Solution s;
-//  vector<vector<int>>arr = { {3,3,5 }, { 1,3,20 }, { 1,2,15 }};
-//  s.corpFlightBookings(arr, 3);
-//	return 0;
-//}
+	}
+	return res;
+}
+int main() {
+	string s = "1.25+1.3";
+	cout << getRes(s) << endl;
+	return 0;
+}
