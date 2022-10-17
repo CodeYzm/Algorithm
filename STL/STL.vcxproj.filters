@@ -154,6 +154,9 @@
     <ClCompile Include="tree.cpp">
       <Filter>源文件\EXAM</Filter>
     </ClCompile>
+    <ClCompile Include="smart_ptr_usage.cpp">
+      <Filter>源文件\Coding Demo</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="源文件">

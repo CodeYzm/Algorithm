@@ -180,6 +180,7 @@
     <ClCompile Include="simple_factory.cpp" />
     <ClCompile Include="singleton.cpp" />
     <ClCompile Include="smart_ptr.cpp" />
+    <ClCompile Include="smart_ptr_usage.cpp" />
     <ClCompile Include="sort.cpp" />
     <ClCompile Include="sort_list.cpp" />
     <ClCompile Include="template_reference.cpp" />
