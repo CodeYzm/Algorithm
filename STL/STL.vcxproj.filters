@@ -157,6 +157,9 @@
     <ClCompile Include="smart_ptr_usage.cpp">
       <Filter>源文件\Coding Demo</Filter>
     </ClCompile>
+    <ClCompile Include="template_method.cpp">
+      <Filter>源文件\Design Mode</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="源文件">
