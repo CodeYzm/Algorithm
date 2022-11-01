@@ -183,6 +183,7 @@
     <ClCompile Include="smart_ptr_usage.cpp" />
     <ClCompile Include="sort.cpp" />
     <ClCompile Include="sort_list.cpp" />
+    <ClCompile Include="Strategy.cpp" />
     <ClCompile Include="template_method.cpp" />
     <ClCompile Include="template_reference.cpp" />
     <ClCompile Include="test_datasize.cpp" />

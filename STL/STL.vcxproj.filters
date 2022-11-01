@@ -160,6 +160,9 @@
     <ClCompile Include="template_method.cpp">
       <Filter>源文件\Design Mode</Filter>
     </ClCompile>
+    <ClCompile Include="Strategy.cpp">
+      <Filter>源文件\Design Mode</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="源文件">
