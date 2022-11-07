@@ -163,6 +163,9 @@
     <ClCompile Include="Strategy.cpp">
       <Filter>源文件\Design Mode</Filter>
     </ClCompile>
+    <ClCompile Include="virtual_base_class.cpp">
+      <Filter>源文件\C++</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="源文件">

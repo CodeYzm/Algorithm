@@ -193,6 +193,7 @@
     <ClCompile Include="unionStorage.cpp" />
     <ClCompile Include="variadic_template.cpp" />
     <ClCompile Include="var_template.cpp" />
+    <ClCompile Include="virtual_base_class.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sample_hashmap.h" />
