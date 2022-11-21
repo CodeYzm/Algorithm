@@ -166,6 +166,9 @@
     <ClCompile Include="virtual_base_class.cpp">
       <Filter>源文件\C++</Filter>
     </ClCompile>
+    <ClCompile Include="test.c">
+      <Filter>源文件\C</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="源文件">
@@ -191,6 +194,9 @@
     </Filter>
     <Filter Include="源文件\EXAM">
       <UniqueIdentifier>{7064c442-41e7-436c-b2c9-d55bb4f7c259}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\C">
+      <UniqueIdentifier>{831a47b2-95e8-419a-b7f1-34f4b9ebc574}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

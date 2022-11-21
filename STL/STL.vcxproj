@@ -186,6 +186,7 @@
     <ClCompile Include="Strategy.cpp" />
     <ClCompile Include="template_method.cpp" />
     <ClCompile Include="template_reference.cpp" />
+    <ClCompile Include="test.c" />
     <ClCompile Include="test_datasize.cpp" />
     <ClCompile Include="thread_pool.cpp" />
     <ClCompile Include="thread_pool_cas.cpp" />
